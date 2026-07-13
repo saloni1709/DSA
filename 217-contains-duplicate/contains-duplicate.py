@@ -5,12 +5,7 @@ class Solution(object):
         :rtype: bool
         """
         
-        s = set()
-
-        for i in nums:
-            if i not in s:
-                s.add(i)
-            else:
-                return True
-        
-        return False
+        if len(nums) == len(set(nums)):
+            return False
+        else:
+            return True
