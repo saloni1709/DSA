@@ -7,6 +7,4 @@ class Solution(object):
 
         if s.upper():
             return s.lower()
-        else:
-            return s
         
