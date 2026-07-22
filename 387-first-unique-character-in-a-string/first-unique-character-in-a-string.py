@@ -5,16 +5,14 @@ class Solution(object):
         :rtype: int
         """
 
-        freq = {}
+        fre = {}
 
         for ch in s:
-            if ch in freq:
-                freq[ch] += 1
-            else:
-                freq[ch] = 1
-        
-        for i, ch in enumerate(s):
-            if freq[ch] == 1:
-                return i
-        
+            fre[ch] = fre.get(ch, 0) + 1
+        for idx, val in enumerate(s):
+            if fre[val] == 1:
+                return idx
+                break
         return -1
+
+        
