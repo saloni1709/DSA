@@ -4,15 +4,14 @@ class Solution(object):
         :type sentences: List[str]
         :rtype: int
         """
-        
-        maximum = 0
+
+        max = 0
 
         for sentence in sentences:
-            words = sentence.split()
-
-            count = len(words)
-
-            if count > maximum:
-                maximum = count
+            word = sentence.split()
+            if len(word) > max:
+                max = len(word)
         
-        return maximum
+        return max
+        
+        
