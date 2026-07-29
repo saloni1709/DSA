@@ -6,20 +6,27 @@ class Solution(object):
         """
         
         stack = []
+        pairs = {
+            ')' : '(',
+            ']' : '[',
+            '}' : '{'
+        }
 
-        for bracket in s:
-            if bracket == "(" or bracket == "[" or bracket == "{":
-                stack.append(bracket)
-            else:
+        valid = True
+
+        for ch in s:
+            if ch == '(' or ch == '[' or ch == '{':
+                stack.append(ch)
+            elif ch == ')' or ch == ']' or ch == '}':
                 if len(stack) == 0:
-                    return False
-                ch = stack.pop()
-            
-            if (
-                (bracket == ')' and ch != '(') or
-                (bracket == ']' and ch != '[') or
-                (bracket == '}' and ch != '{')
-            ):
-                return False
+                    valid = False
+                    break
+                if stack[-1] != pairs[ch]:
+                    valid = False
+                    break
+                stack.pop()
 
-        return len(stack) == 0
+        if valid and len(stack) == 0:
+            return True
+        else:
+            return False
