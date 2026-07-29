@@ -5,10 +5,16 @@ class Solution(object):
         :rtype: int
         """
         
-        nums.sort()
+        # nums.sort()
 
-        for i in range(len(nums)):
-            if nums[i] != i:
-                return i
+        # for i in range(len(nums)):
+        #     if nums[i] != i:
+        #         return i
         
-        return len(nums)
+        # return len(nums)
+
+
+        s = set(nums)
+        for i in range(len(s) + 1):
+            if i not in s:
+                return i
