@@ -22,8 +22,7 @@ class Solution(object):
             elif left.val != right.val:
                 return False
 
-            return mirror(left.left, right.right) and \
-                   mirror(left.right, right.left)
+            return mirror(left.left, right.right) and mirror(left.right, right.left)
 
         return mirror(root.left, root.right)  
 
