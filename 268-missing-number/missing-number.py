@@ -20,7 +20,7 @@ class Solution(object):
         # return len(nums)
 
 
-        s = set(nums)
-        for i in range(len(s) + 1):
-            if i not in s:
-                return i
+        # s = set(nums)
+        # for i in range(len(s) + 1):
+        #     if i not in s:
+        #         return i
