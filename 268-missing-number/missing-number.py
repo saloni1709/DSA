@@ -4,6 +4,12 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
+
+        nums = set(nums)
+        for i in range(len(nums)):
+            if i not in nums:
+                return i
+        return len(nums)
         
         # nums.sort()
 
