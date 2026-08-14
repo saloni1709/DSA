@@ -9,42 +9,24 @@ class Solution(object):
         :type head: Optional[ListNode]
         :rtype: bool
         """
-        
-        if head == None or head.next == None:
-            return True
 
-        # Find middle
-        slow = head
-        fast = head
-
+        t1 = head
+        slow = t1
+        fast = t1
         while fast != None and fast.next != None:
             slow = slow.next
             fast = fast.next.next
-
-        # Reverse second half
-        def rev(head1):
-            prev = None
-            t2 = head1
-
-            while t2 != None:
-                temp = t2.next
-                t2.next = prev
-                prev = t2
-                t2 = temp
-
-            return prev
-
-        head1 = rev(slow)
-
-        # Compare first half and reversed second half
+        t1 = slow
+        prev = None
+        while t1 != None:
+            temp = t1.next
+            t1.next = prev
+            prev = t1
+            t1 = temp
         t1 = head
-        t2 = head1
-
-        while t2 != None:
-            if t1.val != t2.val:
+        while prev != None:
+            if t1.val != prev.val:
                 return False
-
             t1 = t1.next
-            t2 = t2.next
-
+            prev = prev.next
         return True
