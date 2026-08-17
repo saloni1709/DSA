@@ -2,6 +2,9 @@ class Solution(object):
     def backspaceCompare(self, s, t):
         """
         :type s: str
+
+
+
         :type t: str
         :rtype: bool
         """
@@ -23,9 +26,9 @@ class Solution(object):
             else:
                 s2.append(j)
         
-        # if s1 == s2:
-        #     return True
-        # return False
+        if s1 == s2:
+            return True
+        return False
 
-        return s1 == s2
+        # return s1 == s2
         
