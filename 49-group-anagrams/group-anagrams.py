@@ -7,7 +7,7 @@ class Solution(object):
         
         f = {}
         for word in strs:
-            key = "".join(sorted(word))
+            key = "".join(sorted(word)) 
             if key not in f:
                 f[key] = []
             f[key].append(word)
