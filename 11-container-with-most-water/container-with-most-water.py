@@ -8,15 +8,16 @@ class Solution(object):
         l = 0
         r = len(height) - 1
 
-        max_area = 0
+        max_len = 0
 
         while l < r:
-            curr_area = (r-l) * min(height[l], height[r])
-            max_area = max(max_area, curr_area)
+            curr_len = (r-l) * min(height[l], height[r])
+            max_len = max(curr_len, max_len)
 
             if height[l] < height[r]:
                 l += 1
             else:
                 r -= 1
 
-        return max_area
+        return max_len
+        
