@@ -5,19 +5,31 @@ class Solution(object):
         :rtype: List[int]
         """
 
-        n = len(nums)
-        ans = [1] * n
+        prod = 1
+        x = 1
+        ans = []
+        count = 0
+        for i in nums:
+            prod *= i
+            if i == 0:
+                count += 1
+                continue
+            else:
+                x *= i
 
-        # Left product
-        left = 1
-        for i in range(n):
-            ans[i] = left
-            left *= nums[i]
-
-        # Right product
-        right = 1
-        for i in range(n - 1, -1, -1):
-            ans[i] *= right
-            right *= nums[i]
-
+        for i in nums:
+            if count > 1:
+                ans.append(0)
+            elif count == 1:
+                if i == 0:
+                    ans.append(x)
+                else:
+                    ans.append(0)
+            else:
+                ans.append(prod//i)
         return ans
+
+
+
+        
+            
