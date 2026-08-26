@@ -7,15 +7,13 @@ class Solution(object):
 
         total = sum(nums)
         l = 0
-        
         for i in range(len(nums)):
-            curr = nums[i]
-            r = total - l - curr
-        
+            pivot = nums[i]
+            # total = l + r + pivot
+            r = total - l - pivot
+
             if l == r:
                 return i
-            else:
-                l += nums[i]
-                i += 1
-        
+            l += pivot
+            
         return -1
