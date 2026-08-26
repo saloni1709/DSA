@@ -8,6 +8,6 @@ class Solution(object):
 
         if len(nums) < k:
             k = k % len(nums)
-
+        
         nums[:] = nums[-k:] + nums[:-k]
         return nums
