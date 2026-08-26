@@ -16,7 +16,7 @@ class Solution(object):
         r = n
 
         while l <= r:
-            mid = (l + r)//2
+            mid = l + (r - l)//2
             if guess(mid) == 0:
                 return mid
             elif guess(mid) == -1:
