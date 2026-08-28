@@ -4,16 +4,12 @@ class Solution(object):
         :type strs: List[str]
         :rtype: str
         """
-
+        
         ans = ""
-
         for i in range(len(strs[0])):
             ch = strs[0][i]
-
             for word in strs:
-                if i >= len(word) or word[i] != ch:
+                if len(word) <= i or ch != word[i]:
                     return ans
-            ans+=ch
+            ans += ch
         return ans
-        
-                    
