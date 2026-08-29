@@ -6,9 +6,9 @@ class Solution(object):
         """
         
         count = 0
-        l = 0
-        for r in range(len(word)):
-            sub = word[l:r+1]
-            if word[r] in 'aeiou':
-                count += (r + 1) * (len(word) - r)
-        return count  
+        vowel = 0
+        for i in range(len(word)):
+            if word[i] in 'aeiou':
+                vowel += i+1
+            count += vowel
+        return count
