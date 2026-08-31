@@ -5,9 +5,8 @@ class Solution(object):
         :rtype: bool
         """
         
-        alpha = "abcdefghijklmnopqrstuvwxyz"
-
-        for ch in alpha:
-            if ch not in sentence:
+        alpha = 'abcdefghijklmnopqrstuvwxyz'
+        for i in alpha:
+            if i not in sentence:
                 return False
         return True
