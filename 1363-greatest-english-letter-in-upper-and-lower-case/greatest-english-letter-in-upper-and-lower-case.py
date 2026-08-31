@@ -8,11 +8,8 @@ class Solution(object):
         max = 0
         for i in s:
             if i.islower() and i.upper() in s:
-                num = ord(i)
-                if num > max:
-                    max = num
-            
+                if ord(i) > max:
+                    max = ord(i)
         if max == 0:
             return ""
-            
         return chr(max).upper()
