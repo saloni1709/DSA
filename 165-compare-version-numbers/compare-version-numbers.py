@@ -6,25 +6,24 @@ class Solution(object):
         :rtype: int
         """
 
-        version1 = version1.split(".")
-        version2 = version2.split(".")
+        v1 = version1.split(".")
+        v2 = version2.split(".")      
+        
+        v = max(len(v1), len(v2))
 
-        n = max(len(version1), len(version2))
-
-        for i in range(n):
-            if i < len(version1):
-                a = int(version1[i])
+        for i in range(v):
+            if i < len(v1):
+                a = int(v1[i])
             else:
                 a = 0
             
-            if i < len(version2):
-                b = int(version2[i])
+            if i < len(v2):
+                b = int(v2[i])
             else:
                 b = 0
-
+            
             if a < b:
                 return -1
             elif a > b:
                 return 1
-        return 0    
-        
+        return 0
