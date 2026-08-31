@@ -5,6 +5,6 @@ class Solution(object):
         :rtype: bool
         """
         
-        if word.isupper() or word.islower() or word == word.capitalize():
+        if word.islower() or word.isupper() or word == word.capitalize():
             return True
         return False
