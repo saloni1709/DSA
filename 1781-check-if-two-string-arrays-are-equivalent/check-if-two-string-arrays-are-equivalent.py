@@ -6,11 +6,9 @@ class Solution(object):
         :rtype: bool
         """
         
-        s = "".join(word1)
-        s1 = "".join(word2)
+        w1 = "".join(word1)
+        w2 = "".join(word2)
 
-        if s == s1:
+        if w1 == w2:
             return True
-        else:
-            return False
-        
+        return False
