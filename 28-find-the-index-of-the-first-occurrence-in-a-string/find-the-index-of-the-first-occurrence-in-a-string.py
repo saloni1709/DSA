@@ -5,10 +5,7 @@ class Solution(object):
         :type needle: str
         :rtype: int
         """
-
-        if needle not in haystack:
-            return -1
-        else:
-            return haystack.find(needle)
-            
         
+        if needle in haystack:
+            return haystack.find(needle)
+        return -1
