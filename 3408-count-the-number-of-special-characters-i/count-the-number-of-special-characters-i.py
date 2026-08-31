@@ -4,11 +4,11 @@ class Solution(object):
         :type word: str
         :rtype: int
         """
-        
+
         count = 0
-        word = set(word)
-        for i in word:
-            if i.isupper() and i.lower() in word:
+        for i in set(word):
+            if i.islower() and i.upper() in word:
                 count += 1
-        
+            # else:
+            #     count = 0
         return count
