@@ -6,10 +6,9 @@ class Solution(object):
         """
         
         ans = []
-
-        for i in title.split():
-            if len(i) <= 2:
-                ans.append(i.lower())
+        for word in title.split():
+            if len(word) <= 2:
+                ans.append(word.lower())
             else:
-                ans.append(i.title())
+                ans.append(word.title())
         return " ".join(ans)
