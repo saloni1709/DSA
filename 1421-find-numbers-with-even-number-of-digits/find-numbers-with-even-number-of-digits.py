@@ -4,17 +4,11 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-
-        ans = 0
-
-        for i in nums:
-            count = 0
-
-            while i > 0:
-                count += 1
-                i = i // 10
-
-            if count % 2 == 0:
-                ans += 1
         
-        return ans
+        count = 0
+        for i in nums:
+            if len(str(i))%2 == 0:
+                count += 1
+        return count
+
+                
