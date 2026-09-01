@@ -4,7 +4,7 @@ class Solution(object):
         :type nums: List[int]
         :rtype: List[int]
         """
-
+        
         ans = []
         seen = set(nums)
         for i in range(1, len(nums)+1):
