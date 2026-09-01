@@ -4,23 +4,7 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-
-        nums = set(nums)
-        for i in range(len(nums)):
+        
+        for i in range(0, len(nums)+1):
             if i not in nums:
                 return i
-        return len(nums)
-        
-        # nums.sort()
-
-        # for i in range(len(nums)):
-        #     if nums[i] != i:
-        #         return i
-        
-        # return len(nums)
-
-
-        # s = set(nums)
-        # for i in range(len(s) + 1):
-        #     if i not in s:
-        #         return i
