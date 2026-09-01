@@ -5,18 +5,4 @@ class Solution(object):
         :rtype: List[int]
         """
         
-        # nums = nums * 2
-        # return nums
-
-
-        ## By Linear Search
-
-        ans = []
-
-        for i in range(len(nums)):
-            ans.append(nums[i])
-
-        for i in range(len(nums)):
-            ans.append(nums[i])
-
-        return ans
+        return nums*2
