@@ -6,8 +6,6 @@ class Solution(object):
         """
         
         ans = []
-        for i in range(len(nums)):
-            ans.append(nums[nums[i]])
-        
+        for i in nums:
+            ans.append(nums[i])
         return ans
-                
