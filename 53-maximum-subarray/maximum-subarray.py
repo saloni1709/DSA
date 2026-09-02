@@ -5,9 +5,9 @@ class Solution(object):
         :rtype: int
         """
         
-        total = 0
         maxi = float('-inf')
-        for i in range(0, len(nums)):
+        total = 0
+        for i in range(len(nums)):
             total += nums[i]
             maxi = max(maxi, total)
 
