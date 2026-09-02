@@ -5,21 +5,17 @@ class Solution(object):
         :type t: str
         :rtype: bool
         """
-
-        i = 0
-        j = 0
-
-        while i<len(s) and j<len(t):
-            if s[i] == t[j]:
-                i += 1
-                j += 1
+        
+        l = 0
+        r = 0
+        while l < len(s) and r < len(t):
+            if s[l] == t[r]:
+                l += 1
+                r += 1
             else:
-                j += 1
-            
-        if i == len(s):
+                r += 1
+        
+        if l == len(s):
             return True
         else:
             return False
-        
-        
-        
