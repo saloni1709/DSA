@@ -4,11 +4,12 @@ class Solution(object):
         :type nums: List[int]
         :rtype: List[int]
         """
-
+        
         prod = 1
         x = 1
-        ans = []
         count = 0
+        ans = []
+
         for i in nums:
             prod *= i
             if i == 0:
@@ -27,9 +28,5 @@ class Solution(object):
                     ans.append(0)
             else:
                 ans.append(prod//i)
-        return ans
-
-
-
         
-            
+        return ans
