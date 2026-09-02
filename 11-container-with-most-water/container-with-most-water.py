@@ -9,8 +9,8 @@ class Solution(object):
         r = len(height) - 1
         max_len = 0
         while l < r:
-            curr = (r-l) * min(height[l], height[r])
-            max_len = max(max_len, curr)
+            curr_len = (r-l) * min(height[l], height[r])
+            max_len = max(max_len, curr_len)
 
             if height[l] < height[r]:
                 l += 1
