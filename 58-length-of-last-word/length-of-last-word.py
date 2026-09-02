@@ -6,5 +6,5 @@ class Solution(object):
         """
         
         word = s.split()
-        w = len(word[-1])
-        return w
+        length = len(word[-1])
+        return length
