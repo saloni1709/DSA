@@ -5,6 +5,5 @@ class Solution(object):
         :rtype: str
         """
         
-        if "." in address:
-            address = address.replace(".", "[.]")
+        address = address.replace(".", "[.]")
         return address
