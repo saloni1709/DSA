@@ -11,6 +11,6 @@ class Solution(object):
         :rtype: List[int]
         """
         
-        if root == None:
+        if not root:
             return []
         return self.postorderTraversal(root.left) + self.postorderTraversal(root.right) + [root.val]
