@@ -4,11 +4,10 @@ class Solution(object):
         :type nums: List[int]
         :rtype: bool
         """
-
-        fre = {}
+        
+        f = {}
         for i in nums:
-            fre[i] = fre.get(i, 0) + 1
-            if fre[i] > 1:
+            f[i] = f.get(i, 0) + 1
+            if f[i] > 1:
                 return True
         return False
-        
