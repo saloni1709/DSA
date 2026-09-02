@@ -5,7 +5,7 @@ class Solution(object):
         :type t: str
         :rtype: bool
         """
-
+        
         f = {}
         f1 = {}
 
@@ -17,4 +17,4 @@ class Solution(object):
         if f == f1:
             return True
         else:
-            return False        
+            return False
