@@ -7,17 +7,14 @@ class Solution(object):
         
         l = 0
         r = len(height) - 1
-
         max_len = 0
-
         while l < r:
-            curr_len = (r-l) * min(height[l], height[r])
-            max_len = max(curr_len, max_len)
+            curr = (r-l) * min(height[l], height[r])
+            max_len = max(max_len, curr)
 
             if height[l] < height[r]:
                 l += 1
             else:
                 r -= 1
-
-        return max_len
         
+        return max_len
