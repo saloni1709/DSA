@@ -6,7 +6,7 @@ class Solution(object):
         """
         
         st = set()
-        for ch in s:
-            if ch in st:
-                return ch
-            st.add(ch)
+        for i in s:
+            if i in st:
+                return i
+            st.add(i)
