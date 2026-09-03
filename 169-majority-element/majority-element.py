@@ -6,9 +6,9 @@ class Solution(object):
         """
         
         f = {}
-        for i in range(len(nums)):
-            f[nums[i]] = f.get(nums[i], 0) + 1
+        for i in nums:
+            f[i] = f.get(i, 0) + 1
 
-            if f[nums[i]] > len(nums)//2:
-                return nums[i]
+            if f[i] > len(nums)//2:
+                return i
         
