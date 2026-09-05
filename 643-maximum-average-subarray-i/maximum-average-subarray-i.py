@@ -18,7 +18,7 @@ class Solution(object):
 
             if window_sum > max_sum:
                 max_sum = window_sum
-
+        
         avg = max_sum / float(k)
 
         return avg
