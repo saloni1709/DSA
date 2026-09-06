@@ -12,25 +12,16 @@ class Solution(object):
 
         for i in range(k):
             window_sum += arr[i]
-
         avg = window_sum / k
         if avg >= threshold:
             count += 1
-
+        
         for j in range(k, len(arr)):
-            window_sum -= arr[j-k]
             window_sum += arr[j]
+            window_sum -= arr[j-k]
 
             avg = window_sum / k
-
             if avg >= threshold:
-                count+=1
+                count += 1
 
         return count
-
-        
-
-
-        
-
-        
