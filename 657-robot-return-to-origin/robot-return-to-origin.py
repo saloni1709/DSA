@@ -5,6 +5,6 @@ class Solution(object):
         :rtype: bool
         """
         
-        if moves.count('L') == moves.count('R') and moves.count('D') == moves.count('U'):
+        if moves.count("U") == moves.count("D") and moves.count("L") == moves.count("R"):
             return True
         return False
