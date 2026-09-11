@@ -6,8 +6,8 @@ class Solution(object):
         """
         
         max = 0
-        for sentence in sentences:
-            word = sentence.split()
+        for i in sentences:
+            word = i.split()
             if len(word) > max:
                 max = len(word)
         return max
