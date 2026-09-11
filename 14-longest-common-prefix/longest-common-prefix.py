@@ -10,7 +10,7 @@ class Solution(object):
             ch = strs[0][i]
 
             for word in strs:
-                if len(word) <= i or word[i] != ch:
+                if len(word) <= i or ch != word[i]:
                     return ans
             ans += ch
-        return ans
+        return ans  
