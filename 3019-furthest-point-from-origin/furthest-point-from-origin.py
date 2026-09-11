@@ -8,7 +8,6 @@ class Solution(object):
         l = 0
         r = 0
         blank = 0
-
         for i in moves:
             if i == 'L':
                 l += 1
@@ -16,5 +15,4 @@ class Solution(object):
                 r += 1
             else:
                 blank += 1
-        
-        return abs(l-r) + blank 
+        return abs(l-r)+blank
