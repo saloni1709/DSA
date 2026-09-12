@@ -11,8 +11,6 @@ class Solution(object):
                 total += nums[i]
             else:
                 break
-        
         while total in nums:
-            total += 1
-        
-        return total
+            total += 1 
+        return total  
