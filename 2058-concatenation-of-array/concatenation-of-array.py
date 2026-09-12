@@ -5,9 +5,11 @@ class Solution(object):
         :rtype: List[int]
         """
         
-        ans = []
-        for i in range(len(nums)):
-            ans.append(nums[i])
-        for j in range(len(nums)):
-            ans.append(nums[j])
-        return ans
+        # ans = []
+        # for i in range(len(nums)):
+        #     ans.append(nums[i])
+        # for j in range(len(nums)):
+        #     ans.append(nums[j])
+        # return ans
+
+        return nums*2
