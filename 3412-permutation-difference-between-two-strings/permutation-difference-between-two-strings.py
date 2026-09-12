@@ -11,5 +11,6 @@ class Solution(object):
             i = s.index(ch)
             j = t.index(ch)
 
-            total += abs(i - j)
+            total += abs(i-j)
         return total
+    
