@@ -16,7 +16,6 @@ class Solution(object):
         }
 
         total = 0
-
         for i in range(len(s)):
             if i+1 < len(s) and pairs[s[i]] < pairs[s[i+1]]:
                 total -= pairs[s[i]]
