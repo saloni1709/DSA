@@ -9,7 +9,6 @@ class Solution(object):
         v1 = version1.split(".")
         v2 = version2.split(".")
         v = max(len(v1), len(v2))
-
         for i in range(v):
             if i < len(v1):
                 a = int(v1[i])
@@ -19,6 +18,7 @@ class Solution(object):
                 b = int(v2[i])
             else:
                 b = 0
+            
             if a < b:
                 return -1
             elif a > b:
