@@ -7,8 +7,8 @@ class Solution(object):
         
         max = 0
         for i in s:
-            if i.islower() and i.upper() in s:
-                if ord(i) > max:
+            if i.isupper() and i.lower() in s:
+                if ord(i)> max:
                     max = ord(i)
         if max == 0:
             return ""
