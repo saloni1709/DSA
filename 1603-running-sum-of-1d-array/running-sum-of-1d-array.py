@@ -5,17 +5,9 @@ class Solution(object):
         :rtype: List[int]
         """
         
-        
-
-        sum = 0
+        total = 0
         ans = []
-
         for i in nums:
-            sum += i
-            ans.append(sum)
-
+            total += i
+            ans.append(total)
         return ans
-
-        
-       
-
