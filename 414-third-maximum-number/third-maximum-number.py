@@ -5,8 +5,8 @@ class Solution(object):
         :rtype: int
         """
         
-        nums = list(set(nums))
-        nums.sort()
-        if len(nums) < 3:
-            return nums[-1]
-        return nums[-3]
+        seen = list(set(nums))
+        seen.sort()
+        if len(seen) < 3:
+            return seen[-1]
+        return seen[-3]
