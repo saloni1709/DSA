@@ -9,5 +9,3 @@ class Solution(object):
         for i in nums:
             ans.append(nums[i])
         return ans
-
-      
