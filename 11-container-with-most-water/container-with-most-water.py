@@ -6,7 +6,7 @@ class Solution(object):
         """
         
         l = 0
-        r = len(height) - 1
+        r = len(height)-1
         max_len = 0
         while l < r:
             curr_len = (r-l) * min(height[l], height[r])
@@ -16,5 +16,5 @@ class Solution(object):
                 l += 1
             else:
                 r -= 1
-        
+
         return max_len
